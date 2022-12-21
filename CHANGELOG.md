@@ -1,3 +1,9 @@
+#### 1.0.1 (2022-12-21)
+
+##### Documentation Changes
+
+*  updated docs to better reflect the package ([82f9c776](https://github.com/Cadienvan/ab-test-fn/commit/82f9c776ae0e99fe85b94bcb4822ff37a7f9020b))
+
 ## 1.0.0 (2022-12-21)
 
 ##### New Features
