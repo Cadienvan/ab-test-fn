@@ -1,4 +1,4 @@
-export function AB(...args: unknown[]): unknown {
+export function AB(...args: unknown[]): Function {
   if (args.length < 3) {
     throw new Error(
       'You must provide at least 3 arguments. At least two functions must be provided and an array of weights'
@@ -30,13 +30,15 @@ export function AB(...args: unknown[]): unknown {
     throw new Error('All arguments except the last must be functions');
   }
 
-  const totalWeight = weights.reduce((a, b) => a + b, 0);
-  const random = Math.random() * totalWeight;
-  let weight = 0;
-  for (let i = 0; i < fns.length; i++) {
-    weight += weights[i];
-    if (random <= weight) {
-      return fns[i];
+  return (...inArgs) => {
+    const totalWeight = weights.reduce((a, b) => a + b, 0);
+    const random = Math.random() * totalWeight;
+    let weight = 0;
+    for (let i = 0; i < fns.length; i++) {
+      weight += weights[i];
+      if (random <= weight) {
+        return (fns[i] as Function)(...inArgs);
+      }
     }
-  }
+  };
 }

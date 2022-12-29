@@ -75,25 +75,25 @@ describe('AB function', () => {
 
   it('should return the first function if the random number is less than the first weight', () => {
     Math.random = jest.fn().mockReturnValueOnce(0.1);
-    const fn1 = jest.fn();
-    const fn2 = jest.fn();
-    const result = AB(fn1, fn2, [1, 1]);
-    expect(result).toBe(fn1);
+    const fn1 = () => 'a';
+    const fn2 = () => 'b';
+    const result = AB(fn1, fn2, [1, 1])();
+    expect(result).toBe('a');
   });
 
   it('should return the second function if the random number is greater than the first weight', () => {
     Math.random = jest.fn().mockReturnValueOnce(0.5);
-    const fn1 = jest.fn();
-    const fn2 = jest.fn();
-    const result = AB(fn1, fn2, [0.3, 0.7]);
-    expect(result).toBe(fn2);
+    const fn1 = () => 'a';
+    const fn2 = () => 'b';
+    const result = AB(fn1, fn2, [0.3, 0.7])();
+    expect(result).toBe('b');
   });
 
   it('should return the first function if the random number is equal to the first weight', () => {
-    Math.random = jest.fn().mockReturnValueOnce(1);
-    const fn1 = jest.fn();
-    const fn2 = jest.fn();
-    const result = AB(fn1, fn2, [1, 1]);
-    expect(result).toBe(fn2);
+    Math.random = jest.fn().mockReturnValueOnce(0.5);
+    const fn1 = () => 'a';
+    const fn2 = () => 'b';
+    const result = AB(fn1, fn2, [0.5, 0.5])();
+    expect(result).toBe('a');
   });
 });
