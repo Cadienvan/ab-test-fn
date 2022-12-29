@@ -1,3 +1,9 @@
+## 2.0.0 (2022-12-29)
+
+##### New Features
+
+*  provided real hof functionality ([ef031513](https://github.com/Cadienvan/ab-test-fn/commit/ef031513010bf749bb33cb34308206af9ebb48a7))
+
 #### 1.0.1 (2022-12-21)
 
 ##### Documentation Changes
