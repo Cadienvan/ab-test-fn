@@ -1,3 +1,10 @@
+#### 2.0.1 (2023-04-23)
+
+##### Continuous Integration
+
+*  Added Node 20 in ci test matrix ([ccb65a59](https://github.com/Cadienvan/ab-test-fn/commit/ccb65a59c8af1adc3de78daf602b8fc4c36caf44))
+*  Added Node CI ([32474a63](https://github.com/Cadienvan/ab-test-fn/commit/32474a6321d64664ab09d8a17861e2d46b70b0df))
+
 ## 2.0.0 (2022-12-29)
 
 ##### New Features
