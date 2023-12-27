@@ -2,7 +2,7 @@
   "name": "ab-test-fn",
   "description": "A higher-order function to provide an A/B testing mechanism with multiple weights.",
   "private": false,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
