@@ -1,3 +1,9 @@
+#### 2.0.2 (2023-12-27)
+
+##### Chores
+
+*  update dependencies ([6110289b](https://github.com/Cadienvan/ab-test-fn/commit/6110289b846644949e591c093d474ec62357143f))
+
 #### 2.0.1 (2023-04-23)
 
 ##### Continuous Integration
